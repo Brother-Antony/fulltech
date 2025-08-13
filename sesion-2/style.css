@@ -1,0 +1,116 @@
+/* text-align: Centrar el Texto: center (centrado), left (izquierda), right (derecha), top (arriba), bottom (abajo) */
+
+/* Unidades relativas: px, %, em, rem, vh, vw */
+
+/* width: 100%; (ANCHO)
+hidth: 100%; (ALTURA) */
+
+/* Este contenido ocupa toda la pantalla gracias a (100vh)
+.contenido {
+    width: 100%;
+    height: 100vh;
+} */
+
+/* font-size es TAMAÑO de texto */
+
+/* FLEXBOX es display: flex; */
+
+/* .padding {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    display: grid;
+    place-content: center;
+}
+
+.margin {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 12px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* @font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto/Roboto-Regular.ttf");
+} */
+
+* {
+ margin: 0; /* Espaciados afuera del bloque */
+ padding: 0; /* Espaciados dentro del bloque */
+ box-sizing: border-box; /* Ayuda a que el tamaño del bloque sea el mismo que el contenido */
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Roboto", sans-serif; /* Fuente */
+}
+
+header {
+    background-color: black; /* Fondo */
+}
+
+.logo {
+    color: white; /* Color */
+    font-size: 32px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    height: 80px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    color: white;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.hero {
+    padding: 20px 0;
+}
+
+/* RESPONSIVE */
+/* MEDIA QUERIES: adaptar los estilos según el ancho */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+    }
+}
