@@ -31,17 +31,17 @@
 // colores.push("verde")
 // console.log(colores)
 
-// colores = ["negro"] X Error
+// colores = ["negro"] // Error
 
 // - Funciones: Bloques de código reutilizable
 // const saludar = (name) => {
-//     console.log(`${name}`)
+//     console.log(name)
 // }
 
 // saludar("Antony")
 
 // function saludar(name) {
-//     console.log(`${name}`)
+//     console.log(name)
 // }
 
 // saludar("Antony")
@@ -55,9 +55,9 @@
 // - onclick: se ejecuta cuando damos click aun elemento
 // - alert(): muestra un mensaje emergente
 
-// const saludar = () => {
-    // alert("Hola desde la funcion")
-// }
+const saludar = () => {
+    alert("Hola desde la funcion")
+}
 
 // ==================================
 

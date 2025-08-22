@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilvant Restaurante</title>
+    
+    <meta name="title" content="Dilvant Restaurante">
+    <meta name="description" content="Dilvant Restaurante">
+
+    <!-- Icono -->
+    <script src="https://kit.fontawesome.com/3ebe5f560f.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon icono de barra -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- "BEM": Metodologia de escritura de las clases header header__navigation -->
+
+    <header class="header">
+        <div class="container">
+            <a href="/" class="header__logo">Dilvant</a>
+            <div class="header__navigation">
+                <div class="header__navigation--overlay">
+                    <button type="button" class="close-dropdown">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button type="button" class="ham-burger">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <nav class="header__navigation--menu">
+                    <ul class="header__nav">
+                        <div class="header__nav--title">Menú</div>
+                        <div class="header__nav--description">Exploras</div>
+                        <li>
+                            <a href="/" class="header__nav--link active">
+                                <div class="header__nav--icon">
+                                    
+                                </div>
+                                <div class="header__nav--text">Inicio</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/" class="header__nav--link">
+                                <div class="header__nav--icon">
+                                    
+                                </div>
+                                <div class="header__nav--text">Menú</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/" class="header__nav--link">
+                                <div class="header__nav--icon">
+                                    
+                                </div>
+                                <div class="header__nav--text">Nosotros</div>
+                            </a>
+                        </li>
+                        <li>
+                            <button type="button" class="header__nav--link dropdown-toggle">
+                                <div class="header__nav--icon">
+
+                                </div>
+                                <div class="header__nav--text">Reservas</div>
+                                <div class="header__nav--chevron">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </button>
+                            <div class="dropdown__menu">
+                                <a href="#" class="dropdown__menu--link">
+                                    <div class="dropdown__menu--icon"></div>
+                                    <div class="dropwdown__menu--content">
+                                        <div class="dropdown__menu--text">Titulo</div>
+                                        <div class="dropdown__menu--description">Descripcion</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown__menu--link">
+                                    <div class="dropdown__menu--icon"></div>
+                                    <div class="dropwdown__menu--content">
+                                        <div class="dropdown__menu--text">Titulo</div>
+                                        <div class="dropdown__menu--description">Descripcion</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <div class="body-blur" id="body-blur"></div>
+                    </ul>
+                    <div class="header__navigation--button">
+                        <a href="/" target="_blank" class="button">Contacto</a>
+                    </div>
+                </nav>
+            </div>
+            <a href="/" target="_blank" class="header__button button">Contacto</a>
+        </div>
+    </header>
+
+    <section style="padding: 2rem 0;">
+        <div class="container">
+            <div class="recipes__list"></div>
+        </div>
+    </section>
+
+    <footer style="background-color: var(--color-navy); padding: 20px; margin-top: auto;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cum tempore nam in, quasi sed doloribus nemo perspiciatis at repudiandae enim excepturi iusto obcaecati exercitationem commodi esse temporibus. Doloremque, nam.
+    </footer>
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

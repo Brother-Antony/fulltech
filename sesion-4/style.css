@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-reboto: 'Roboto', sans-serif;
+
+    --color-white: #fff;
+    --color-gold: #D4A206;
+    --color-gold-dark: #bb8e08;
+    --color-navy: #0F172A;
+    --color-gold-light: #dfc26a;
+    --color-light-gray: #f1f1f1;
+    --color-dark-green: #001405;
+    --color-dark-red: #6D0101;
+    --color-light-blue: #E2E8F0;
+    --color-slate: #334155;
+    --color-metallic-gold: #d4a00682;
+    --color-dark-gray: #232424;
+    --color-charcoal: #292a29;
+    --color-overlay-dark: #222122b8;
+    --color-overlay-gold: #d4a0064f;
+    --color-navy-light: #0F172A;
+    --color-white-translucent: #ffffff2d;
+    --color-green-translucent: #001405e9;
+    --color-gray-muted: #b3b3b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-reboto);
+    --webkit-font-smoothing: antialiased;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button, .button {
+    cursor: pointer;
+    outline: none;
+    border-style: none;
+    background: none;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1360px;
+    z-index: 10;
+}
+
+.hide-for-mobile {
+    display: none !important;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 12px 28px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-white);
+    background-color: var(--color-gold);
+    letter-spacing: .5px;
+    white-space: nowrap;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+}
+
+.button.lg {
+    font-weight: 700;
+    padding: 20px 48px;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-dark-gray);
+    z-index: 10;
+}
+
+.header .container {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 52.8px;
+    color: var(--color-white);
+}
+
+.header__navigation--overlay {
+    display: none;
+}
+
+.header__navigation--button {
+    display: none;
+    padding: 20px 24px;
+    border-top: 1px solid var(--color-slate);
+}
+
+.header__navigation--button .button {
+    width: 100%;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.header__nav li {
+    position: relative;
+}
+
+.dropdown-toggle {
+    z-index: 10;
+}
+
+.header__nav--link {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .5px;
+    color: var(--color-white);
+}
+
+.header__nav--link.active::before {
+    display: none;
+    content: "";
+    pointer-events: none;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    position: absolute;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 3px;
+}
+
+.header__nav--icon {
+    display: none;
+    place-items: center;
+    width: 24px;
+    margin-right: 8px;
+}
+
+.header__nav--icon i {
+    width: 26px;
+}
+
+.header__nav--chevron {
+    display: inline-block;
+    margin-left: 13.4px;
+    transition: transform .3 ease;
+}
+
+.header__nav--chevron.rotate {
+    transform: rotate(180deg);
+}
+
+.header .ham-burger {
+    display: flex;
+}
+
+.header .close-dropdown {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.body-blur {
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s ease, visibility .3s ease;
+    z-index: 5;
+}
+
+.body-blur.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ------ Dropdown Menu ------ */
+.dropdown__menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    top: 180%;
+    left: -8px;
+    background-color: rgba(255, 255, 255, .822);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .05);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity .3s ease, visibility .3s ease, transform .3s ease;
+    padding: 8px;
+    width: 160px;
+}
+
+.dropdown__menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+.dropdown__menu--link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdown__menu--link:hover {
+    opacity: .7;
+}
+
+.dropdown__menu--icon {
+    display: grid;
+    place-content: center;
+    background-color: var(--color-metallic-gold);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.dropdown__menu--content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dropdown__menu--text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-navy);
+}
+
+.dropdown__menu--description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--color-gray-muted);
+}
+
+.recipes__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* ------------ Responsive ------------ */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .hide-for-mobile {
+        display: block !important;
+    }
+
+    .hide-for-desktop {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header__logo,
+    .header.menu .header__logo {
+        font-size: 24px;
+        color: var(--color-white);
+    }
+
+    .header.menu {
+        background-color: transparent;
+    }
+}

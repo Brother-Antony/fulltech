@@ -1,0 +1,29 @@
+{
+    "recetas": [
+        {
+            "title": "Postres Peruanos",
+            "image": "/img/postre-peruano.png",
+            "url": "/"
+        },
+        {
+            "title": "Causa Rellena",
+            "image": "/img/plato-de-causa.png",
+            "url": "/"
+        },
+        {
+            "title": "Lomo Saltado",
+            "image": "/img/plato-de-causa.png",
+            "url": "/"
+        },
+        {
+            "title": "Pisco Sour",
+            "image": "/img/pisco-sour.png",
+            "url": "/"
+        },
+        {
+            "title": "Ceviche",
+            "image": "/img/plato-de-ceviche.png",
+            "url": "/"
+        }
+    ]
+}
